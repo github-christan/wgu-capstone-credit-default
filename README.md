@@ -3,6 +3,9 @@
 How to run locally:
 
 python -m venv .venv
+
 .\.venv\Scripts\activate
-pip install -r requirements.txt   # or the 3–4 libs you use
+
+pip install -r requirements.txt
+
 python analysis/run_analysis.py
