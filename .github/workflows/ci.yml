@@ -35,7 +35,7 @@ jobs:
           pip install --no-cache-dir "dbt-core==1.10.13"
           pip install --no-cache-dir "dbt-snowflake==1.10.2"
           pip install --no-cache-dir pandas scikit-learn snowflake-connector-python
-          pip install snowflake-sqlalchemy sqlalchemy
+          pip install --no-cache-dir xgboost
           dbt --version
 
       - name: dbt build (staging + feature view + tests)
