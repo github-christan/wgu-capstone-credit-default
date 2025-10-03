@@ -1,0 +1,45 @@
+name: CI - dbt & analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-and-analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+      SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+      SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+      SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
+      SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+      SNOWFLAKE_DATABASE: CREDIT_DEFAULT
+      SNOWFLAKE_SCHEMA: MODEL
+      DBT_PROFILES_DIR: ${{ github.workspace }}/.github/ci
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install dbt-snowflake pandas scikit-learn snowflake-connector-python
+
+      - name: dbt build (staging + feature view + tests)
+        working-directory: dbt_project
+        run: |
+          dbt --version
+          dbt build --select stg_credit_default+ --no-use-colors
+
+      - name: Run analysis (prints AUC/ACC)
+        working-directory: analysis
+        run: |
+          python run_analysis.py
