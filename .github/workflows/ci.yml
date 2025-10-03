@@ -28,20 +28,52 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install dependencies (pin stable matching versions)
         run: |
           python -m pip install --upgrade pip
-          pip uninstall -y dbt-core dbt-snowflake dbt-common dbt-semantic-interfaces dbt-extractor || true
-          pip install --no-cache-dir "dbt-core==1.10.13"
-          pip install --no-cache-dir "dbt-snowflake==1.10.2"
-          pip install --no-cache-dir pandas scikit-learn snowflake-connector-python
-          dbt --version
+          # remove any preinstalled/cached dbt so we control the version
+          python -m pip uninstall -y dbt-core dbt-snowflake dbt-common dbt-extractor dbt-semantic-interfaces || true
+          # install exact, stable versions (choose ONE family; here we use 1.10)
+          python -m pip install --no-cache-dir "dbt-core==1.10.13" "dbt-snowflake==1.10.2"
+          python -m pip install --no-cache-dir pandas scikit-learn snowflake-connector-python
+          # verify the versions that THIS Python will run
+          python -c "import dbt; import pkgutil, sys; print('dbt version:', dbt.version.get_installed_version()); import importlib; print('dbt module path:', importlib.import_module('dbt').__file__)"
+          python -m pip show dbt-core dbt-snowflake
+
+      - name: Verify required secrets are set
+        shell: bash
+        run: |
+          : "${SNOWFLAKE_ACCOUNT:?SNOWFLAKE_ACCOUNT is empty}"
+          : "${SNOWFLAKE_USER:?SNOWFLAKE_USER is empty}"
+          : "${SNOWFLAKE_PASSWORD:?SNOWFLAKE_PASSWORD is empty}"
+          : "${SNOWFLAKE_ROLE:?SNOWFLAKE_ROLE is empty}"
+          : "${SNOWFLAKE_WAREHOUSE:?SNOWFLAKE_WAREHOUSE is empty}"
+          echo "All required secrets are set."
+
+      - name: Quick Snowflake connectivity test
+        run: |
+          python - << "PY"
+          import os, snowflake.connector as sf
+          con = sf.connect(
+            account=os.environ["SNOWFLAKE_ACCOUNT"],
+            user=os.environ["SNOWFLAKE_USER"],
+            password=os.environ["SNOWFLAKE_PASSWORD"],
+            role=os.environ["SNOWFLAKE_ROLE"],
+            warehouse=os.environ["SNOWFLAKE_WAREHOUSE"],
+            database="CREDIT_DEFAULT",
+            schema="MODEL",
+          )
+          cur = con.cursor()
+          cur.execute("select current_version(), current_role(), current_warehouse(), current_database(), current_schema()")
+          print(cur.fetchone())
+          cur.close(); con.close()
+          PY
 
       - name: dbt build (staging + feature view + tests)
         working-directory: dbt_project
         run: |
-          dbt --version
-          dbt build --select stg_credit_default+ --no-use-colors
+          python -m dbt --version
+          python -m dbt build --select stg_credit_default+ --no-use-colors
 
       - name: Run analysis (prints AUC/ACC)
         working-directory: analysis
