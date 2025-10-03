@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_credit_default
+    description: Staging view with standardized schema and label
+    columns:
+      - name: TARGET
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+
+  - name: feature_view_credit_default
+    description: Analytics-ready features for modeling
+    columns:
+      - name: LIMIT_BAL
+        tests:
+          - not_null

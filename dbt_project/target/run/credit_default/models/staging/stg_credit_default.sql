@@ -1,0 +1,24 @@
+
+  create or replace   view CREDIT_DEFAULT.MODEL.stg_credit_default
+  
+  
+  
+  
+  as (
+    
+
+-- Staging view: pass through the RAW table and standardize the label name.
+SELECT
+  ID,
+  LIMIT_BAL,
+  SEX,
+  EDUCATION,
+  MARRIAGE,
+  AGE,
+  PAY_0, PAY_2, PAY_3, PAY_4, PAY_5, PAY_6,
+  BILL_AMT1, BILL_AMT2, BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6,
+  PAY_AMT1, PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6,
+  "payment next month" AS target
+FROM CREDIT_DEFAULT.RAW.RAW_CREDIT_DEFAULT_RAW
+  );
+

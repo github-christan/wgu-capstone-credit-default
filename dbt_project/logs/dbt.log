@@ -1,0 +1,796 @@
+[0m21:56:04.007326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6D65C850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6F8D0400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6F8D01F0>]}
+
+
+============================== 21:56:04.012326 | 6cbd1801-93fb-42bd-8ce4-8843ae700280 ==============================
+[0m21:56:04.012326 [info ] [MainThread]: Running with dbt=1.11.0-b2
+[0m21:56:04.013325 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'empty': 'None', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\tanch\\Documents\\WGU\\D610 Data Engineering Capstone\\dbt_project\\logs', 'profiles_dir': 'C:\\Users\\tanch\\.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m21:56:04.035044 [info ] [MainThread]: dbt version: 1.11.0-b2
+[0m21:56:04.036044 [info ] [MainThread]: python version: 3.10.1
+[0m21:56:04.037045 [info ] [MainThread]: python path: C:\Users\tanch\AppData\Local\Programs\Python\Python310\python.exe
+[0m21:56:04.037710 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m21:56:04.954101 [info ] [MainThread]: Using profiles dir at C:\Users\tanch\.dbt
+[0m21:56:04.954101 [info ] [MainThread]: Using profiles.yml file at C:\Users\tanch\.dbt\profiles.yml
+[0m21:56:04.954101 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\dbt_project.yml
+[0m21:56:04.954101 [info ] [MainThread]: adapter type: snowflake
+[0m21:56:04.954101 [info ] [MainThread]: adapter version: 1.10.2
+[0m21:56:05.088723 [info ] [MainThread]: Configuration:
+[0m21:56:05.088723 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:56:05.088723 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:56:05.088723 [info ] [MainThread]: Required dependencies:
+[0m21:56:05.104346 [debug] [MainThread]: Executing "git --help"
+[0m21:56:05.154893 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:56:05.155575 [debug] [MainThread]: STDERR: "b''"
+[0m21:56:05.155575 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:56:05.155575 [info ] [MainThread]: Connection:
+[0m21:56:05.155575 [info ] [MainThread]:   account: SLQAGZU-ORC07712
+[0m21:56:05.155575 [info ] [MainThread]:   user: CTAN
+[0m21:56:05.155575 [info ] [MainThread]:   database: CREDIT_DEFAULT
+[0m21:56:05.155575 [info ] [MainThread]:   warehouse: WH_DEV
+[0m21:56:05.155575 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m21:56:05.155575 [info ] [MainThread]:   schema: MODEL
+[0m21:56:05.155575 [info ] [MainThread]:   authenticator: None
+[0m21:56:05.155575 [info ] [MainThread]:   oauth_client_id: None
+[0m21:56:05.155575 [info ] [MainThread]:   query_tag: None
+[0m21:56:05.155575 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:56:05.155575 [info ] [MainThread]:   host: None
+[0m21:56:05.155575 [info ] [MainThread]:   port: None
+[0m21:56:05.155575 [info ] [MainThread]:   proxy_host: None
+[0m21:56:05.155575 [info ] [MainThread]:   proxy_port: None
+[0m21:56:05.155575 [info ] [MainThread]:   protocol: None
+[0m21:56:05.155575 [info ] [MainThread]:   connect_retries: 1
+[0m21:56:05.155575 [info ] [MainThread]:   connect_timeout: None
+[0m21:56:05.155575 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:56:05.155575 [info ] [MainThread]:   retry_all: False
+[0m21:56:05.155575 [info ] [MainThread]:   insecure_mode: False
+[0m21:56:05.171201 [info ] [MainThread]:   reuse_connections: True
+[0m21:56:05.171201 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m21:56:05.171201 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m21:56:05.662466 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:56:08.648182 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:56:08.648182 [debug] [MainThread]: On debug: select 1 as id
+[0m21:56:08.648182 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:56:10.554442 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.898 seconds
+[0m21:56:10.554442 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:56:10.554442 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:56:10.570066 [debug] [MainThread]: Command `dbt debug` succeeded at 21:56:10.554442 after 6.67 seconds
+[0m21:56:10.570066 [debug] [MainThread]: Connection 'debug' was left open.
+[0m21:56:10.570066 [debug] [MainThread]: On debug: Close
+[0m21:56:10.648247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6D65C850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD00AA0070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6F8D0070>]}
+[0m21:56:10.663815 [debug] [MainThread]: Flushing usage events
+[0m21:56:10.882564 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:56:15.724737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162963FC880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162986683A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162986681C0>]}
+
+
+============================== 21:56:15.729925 | e9eeb7e2-3c1d-48a9-8fb9-015561b20566 ==============================
+[0m21:56:15.729925 [info ] [MainThread]: Running with dbt=1.11.0-b2
+[0m21:56:15.730929 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt deps', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'empty': 'None', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\tanch\\Documents\\WGU\\D610 Data Engineering Capstone\\dbt_project\\logs', 'profiles_dir': 'C:\\Users\\tanch\\.dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m21:56:16.109979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e9eeb7e2-3c1d-48a9-8fb9-015561b20566', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162986674F0>]}
+[0m21:56:16.134325 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:56:16.134325 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:56:16.134325 [debug] [MainThread]: Command `dbt deps` succeeded at 21:56:16.134325 after 0.53 seconds
+[0m21:56:16.134325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162963FC880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162986674F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016298665DE0>]}
+[0m21:56:16.134325 [debug] [MainThread]: Flushing usage events
+[0m21:56:16.249403 [debug] [MainThread]: An error was encountered while trying to flush usage events
+21:56:30.110693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165FE6EC940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016580A883A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016580A881C0>]}
+
+
+============================== 21:56:30.110693 | 2de1b02a-2df2-4496-ac25-b722302e01d9 ==============================
+21:56:30.110693 [info ] [MainThread]: Running with dbt=1.11.0-b2
+21:56:30.126319 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt build --select stg_credit_default+ --no-use-colors', 'log_format': 'default', 'use_colors': 'False', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\tanch\\Documents\\WGU\\D610 Data Engineering Capstone\\dbt_project\\logs', 'profiles_dir': 'C:\\Users\\tanch\\.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+21:56:31.141944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016580A881F0>]}
+21:56:31.317865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001658013AAA0>]}
+21:56:31.317865 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+21:56:31.796867 [debug] [MainThread]: checksum: 5f40d6d8cb6961df6ed5d565379794e3c4f18a1e87771ee7ad11edbcfd867449, vars: {}, profile: , target: , version: 1.11.0b2
+21:56:31.798889 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+21:56:31.799050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016591540040>]}
+21:56:34.530663 [warn ] [MainThread]: [WARNING][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_credit_default' in package 'credit_default' (models\models.yml). Arguments
+to generic tests should be nested under the `arguments` property.
+21:56:34.531934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016591D38AF0>]}
+21:56:34.684151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016591DB3E50>]}
+21:56:34.809149 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\manifest.json
+21:56:34.809149 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\semantic_manifest.json
+21:56:34.856025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016591D763E0>]}
+21:56:34.856025 [info ] [MainThread]: Found 2 models, 3 data tests, 492 macros
+21:56:34.856025 [info ] [MainThread]: 
+21:56:34.856025 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:56:34.856025 [info ] [MainThread]: 
+21:56:34.871653 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+21:56:34.965417 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CREDIT_DEFAULT'
+21:56:35.059150 [debug] [ThreadPool]: Using snowflake connection "list_CREDIT_DEFAULT"
+21:56:35.059150 [debug] [ThreadPool]: On list_CREDIT_DEFAULT: show terse schemas in database CREDIT_DEFAULT
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "connection_name": "list_CREDIT_DEFAULT"} */
+21:56:35.059150 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:56:35.824815 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.767 seconds
+21:56:35.824815 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CREDIT_DEFAULT, now create_CREDIT_DEFAULT_MODEL_model)
+21:56:35.840433 [debug] [ThreadPool]: Creating schema "database: "CREDIT_DEFAULT"
+schema: "MODEL_model"
+"
+21:56:35.856042 [debug] [ThreadPool]: Using snowflake connection "create_CREDIT_DEFAULT_MODEL_model"
+21:56:35.856042 [debug] [ThreadPool]: On create_CREDIT_DEFAULT_MODEL_model: create schema if not exists CREDIT_DEFAULT.MODEL_model
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "connection_name": "create_CREDIT_DEFAULT_MODEL_model"} */
+21:56:35.949868 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.098 seconds
+21:56:35.965428 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CREDIT_DEFAULT_MODEL_model'
+21:56:35.996684 [debug] [ThreadPool]: Using snowflake connection "list_CREDIT_DEFAULT_MODEL_model"
+21:56:36.012286 [debug] [ThreadPool]: On list_CREDIT_DEFAULT_MODEL_model: show objects in CREDIT_DEFAULT.MODEL_model
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "connection_name": "list_CREDIT_DEFAULT_MODEL_model"} */;
+21:56:36.012286 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:56:36.481050 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.475 seconds
+21:56:36.496685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016591B59EA0>]}
+21:56:36.512306 [debug] [Thread-1 (]: Began running node model.credit_default.stg_credit_default
+21:56:36.527956 [info ] [Thread-1 (]: 1 of 5 START sql view model MODEL_model.stg_credit_default ..................... [RUN]
+21:56:36.527956 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.credit_default.stg_credit_default'
+21:56:36.527956 [debug] [Thread-1 (]: Began compiling node model.credit_default.stg_credit_default
+21:56:36.543555 [debug] [Thread-1 (]: Writing injected SQL for node "model.credit_default.stg_credit_default"
+21:56:36.543555 [debug] [Thread-1 (]: Began executing node model.credit_default.stg_credit_default
+21:56:36.574775 [debug] [Thread-1 (]: Writing runtime sql for node "model.credit_default.stg_credit_default"
+21:56:36.590408 [debug] [Thread-1 (]: Using snowflake connection "model.credit_default.stg_credit_default"
+21:56:36.590408 [debug] [Thread-1 (]: On model.credit_default.stg_credit_default: create or replace   view CREDIT_DEFAULT.MODEL_model.stg_credit_default
+  
+  
+  
+  
+  as (
+    
+
+-- Staging view: pass through the RAW table and standardize the label name.
+SELECT
+  ID,
+  LIMIT_BAL,
+  SEX,
+  EDUCATION,
+  MARRIAGE,
+  AGE,
+  PAY_0, PAY_2, PAY_3, PAY_4, PAY_5, PAY_6,
+  BILL_AMT1, BILL_AMT2, BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6,
+  PAY_AMT1, PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6,
+  "payment next month" AS target
+FROM CREDIT_DEFAULT.RAW.RAW_CREDIT_DEFAULT_RAW
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "model.credit_default.stg_credit_default"} */;
+21:56:36.590408 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+21:56:36.902971 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bf73f4-0000-3719-0060-728b0005f03e
+21:56:36.902971 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 22 at position 157 unexpected ';'.
+21:56:36.949816 [debug] [Thread-1 (]: Database Error in model stg_credit_default (models\staging\stg_credit_default.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 22 at position 157 unexpected ';'.
+  compiled code at target\run\credit_default\models\staging\stg_credit_default.sql
+21:56:36.949816 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2de1b02a-2df2-4496-ac25-b722302e01d9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165808B1D20>]}
+21:56:36.949816 [error] [Thread-1 (]: 1 of 5 ERROR creating sql view model MODEL_model.stg_credit_default ............ [ERROR in 0.42s]
+21:56:36.949816 [debug] [Thread-1 (]: Finished running node model.credit_default.stg_credit_default
+21:56:36.949816 [debug] [Thread-4 (]: Marking all children of 'model.credit_default.stg_credit_default' to be skipped because of status 'error'.  Reason: Database Error in model stg_credit_default (models\staging\stg_credit_default.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 22 at position 157 unexpected ';'.
+  compiled code at target\run\credit_default\models\staging\stg_credit_default.sql.
+21:56:36.949816 [debug] [Thread-1 (]: Began running node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+21:56:36.949816 [info ] [Thread-1 (]: 2 of 5 SKIP test accepted_values_stg_credit_default_TARGET__0__1 ............... [SKIP]
+21:56:36.949816 [debug] [Thread-1 (]: Finished running node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+21:56:36.965401 [debug] [Thread-4 (]: Marking all children of 'test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e' to be skipped because of status 'skipped'. 
+21:56:36.965401 [debug] [Thread-1 (]: Began running node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+21:56:36.965401 [info ] [Thread-1 (]: 3 of 5 SKIP test not_null_stg_credit_default_TARGET ............................ [SKIP]
+21:56:36.965401 [debug] [Thread-1 (]: Finished running node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+21:56:36.965401 [debug] [Thread-4 (]: Marking all children of 'test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e' to be skipped because of status 'skipped'. 
+21:56:36.965401 [debug] [Thread-1 (]: Began running node model.credit_default.feature_view_credit_default
+21:56:36.965401 [info ] [Thread-1 (]: 4 of 5 SKIP relation MODEL_model.feature_view_credit_default ................... [SKIP]
+21:56:36.965401 [debug] [Thread-1 (]: Finished running node model.credit_default.feature_view_credit_default
+21:56:36.965401 [debug] [Thread-4 (]: Marking all children of 'model.credit_default.feature_view_credit_default' to be skipped because of status 'skipped'. 
+21:56:36.965401 [debug] [Thread-1 (]: Began running node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+21:56:36.965401 [info ] [Thread-1 (]: 5 of 5 SKIP test not_null_feature_view_credit_default_LIMIT_BAL ................ [SKIP]
+21:56:36.965401 [debug] [Thread-1 (]: Finished running node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+21:56:36.965401 [debug] [Thread-4 (]: Marking all children of 'test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a' to be skipped because of status 'skipped'. 
+21:56:36.965401 [debug] [MainThread]: Connection 'master' was properly closed.
+21:56:36.965401 [debug] [MainThread]: Connection 'create_CREDIT_DEFAULT_MODEL_model' was left open.
+21:56:36.965401 [debug] [MainThread]: On create_CREDIT_DEFAULT_MODEL_model: Close
+21:56:37.059237 [debug] [MainThread]: Connection 'list_CREDIT_DEFAULT_MODEL_model' was left open.
+21:56:37.059237 [debug] [MainThread]: On list_CREDIT_DEFAULT_MODEL_model: Close
+21:56:37.152970 [debug] [MainThread]: Connection 'model.credit_default.stg_credit_default' was left open.
+21:56:37.152970 [debug] [MainThread]: On model.credit_default.stg_credit_default: Close
+21:56:37.262351 [info ] [MainThread]: 
+21:56:37.262351 [info ] [MainThread]: Finished running 3 data tests, 2 view models in 0 hours 0 minutes and 2.39 seconds (2.39s).
+21:56:37.262351 [debug] [MainThread]: Command end result
+21:56:37.340423 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\manifest.json
+21:56:37.340423 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\semantic_manifest.json
+21:56:37.340423 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\run_results.json
+21:56:37.340423 [info ] [MainThread]: 
+21:56:37.340423 [info ] [MainThread]: Completed with 1 error, 0 partial successes, and 0 warnings:
+21:56:37.340423 [info ] [MainThread]: 
+21:56:37.340423 [error] [MainThread]: Failure in model stg_credit_default (models\staging\stg_credit_default.sql)
+21:56:37.356041 [error] [MainThread]:   Database Error in model stg_credit_default (models\staging\stg_credit_default.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 22 at position 157 unexpected ';'.
+  compiled code at target\run\credit_default\models\staging\stg_credit_default.sql
+21:56:37.356041 [info ] [MainThread]: 
+21:56:37.356041 [info ] [MainThread]:   compiled code at target\compiled\credit_default\models\staging\stg_credit_default.sql
+21:56:37.356041 [info ] [MainThread]: 
+21:56:37.356041 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=4 NO-OP=0 TOTAL=5
+21:56:37.356041 [warn ] [MainThread]: [WARNING][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+21:56:37.356041 [debug] [MainThread]: Command `dbt build` failed at 21:56:37.356041 after 7.33 seconds
+21:56:37.356041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165FE6EC940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000165FCC579D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016591AD4EE0>]}
+21:56:37.356041 [debug] [MainThread]: Flushing usage events
+21:56:37.465480 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:59:45.280248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222D7F7C7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222DA1F03A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222DA1F01C0>]}
+
+
+============================== 21:59:45.285258 | 3d84e9c9-a17a-472e-b791-3beca4aa4518 ==============================
+[0m21:59:45.285258 [info ] [MainThread]: Running with dbt=1.11.0-b2
+[0m21:59:45.286259 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'log_path': 'C:\\Users\\tanch\\Documents\\WGU\\D610 Data Engineering Capstone\\dbt_project\\logs', 'indirect_selection': 'eager', 'profiles_dir': 'C:\\Users\\tanch\\.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m21:59:45.309366 [info ] [MainThread]: dbt version: 1.11.0-b2
+[0m21:59:45.310352 [info ] [MainThread]: python version: 3.10.1
+[0m21:59:45.311090 [info ] [MainThread]: python path: C:\Users\tanch\AppData\Local\Programs\Python\Python310\python.exe
+[0m21:59:45.311090 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m21:59:46.227938 [info ] [MainThread]: Using profiles dir at C:\Users\tanch\.dbt
+[0m21:59:46.228883 [info ] [MainThread]: Using profiles.yml file at C:\Users\tanch\.dbt\profiles.yml
+[0m21:59:46.229929 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\dbt_project.yml
+[0m21:59:46.232320 [info ] [MainThread]: adapter type: snowflake
+[0m21:59:46.233057 [info ] [MainThread]: adapter version: 1.10.2
+[0m21:59:46.355021 [info ] [MainThread]: Configuration:
+[0m21:59:46.355021 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:59:46.355021 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:59:46.355021 [info ] [MainThread]: Required dependencies:
+[0m21:59:46.355021 [debug] [MainThread]: Executing "git --help"
+[0m21:59:46.401889 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:59:46.401889 [debug] [MainThread]: STDERR: "b''"
+[0m21:59:46.401889 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:59:46.401889 [info ] [MainThread]: Connection:
+[0m21:59:46.401889 [info ] [MainThread]:   account: SLQAGZU-ORC07712
+[0m21:59:46.401889 [info ] [MainThread]:   user: CTAN
+[0m21:59:46.401889 [info ] [MainThread]:   database: CREDIT_DEFAULT
+[0m21:59:46.401889 [info ] [MainThread]:   warehouse: WH_DEV
+[0m21:59:46.401889 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m21:59:46.401889 [info ] [MainThread]:   schema: MODEL
+[0m21:59:46.401889 [info ] [MainThread]:   authenticator: None
+[0m21:59:46.401889 [info ] [MainThread]:   oauth_client_id: None
+[0m21:59:46.401889 [info ] [MainThread]:   query_tag: None
+[0m21:59:46.401889 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:59:46.417502 [info ] [MainThread]:   host: None
+[0m21:59:46.417502 [info ] [MainThread]:   port: None
+[0m21:59:46.417502 [info ] [MainThread]:   proxy_host: None
+[0m21:59:46.417502 [info ] [MainThread]:   proxy_port: None
+[0m21:59:46.417502 [info ] [MainThread]:   protocol: None
+[0m21:59:46.417502 [info ] [MainThread]:   connect_retries: 1
+[0m21:59:46.417502 [info ] [MainThread]:   connect_timeout: None
+[0m21:59:46.417502 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:59:46.417502 [info ] [MainThread]:   retry_all: False
+[0m21:59:46.417502 [info ] [MainThread]:   insecure_mode: False
+[0m21:59:46.417502 [info ] [MainThread]:   reuse_connections: True
+[0m21:59:46.417502 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m21:59:46.417502 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m21:59:46.922835 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:59:47.077897 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:59:47.078772 [debug] [MainThread]: On debug: select 1 as id
+[0m21:59:47.078772 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:59:47.828217 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.749 seconds
+[0m21:59:47.829217 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:59:47.830218 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:59:47.833217 [debug] [MainThread]: Command `dbt debug` succeeded at 21:59:47.833217 after 2.65 seconds
+[0m21:59:47.833217 [debug] [MainThread]: Connection 'debug' was left open.
+[0m21:59:47.834217 [debug] [MainThread]: On debug: Close
+[0m21:59:47.923222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222D7F7C7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222EB364550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222EB364400>]}
+[0m21:59:47.924222 [debug] [MainThread]: Flushing usage events
+[0m21:59:48.034677 [debug] [MainThread]: An error was encountered while trying to flush usage events
+21:59:56.061981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A08BFC8B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A0AE6C340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A0AE6C160>]}
+
+
+============================== 21:59:56.067947 | 1291d0be-a7b4-4d15-b5d7-5fe44aaec5db ==============================
+21:59:56.067947 [info ] [MainThread]: Running with dbt=1.11.0-b2
+21:59:56.069052 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt build --select stg_credit_default+ --no-use-colors', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\tanch\\Documents\\WGU\\D610 Data Engineering Capstone\\dbt_project\\logs', 'profiles_dir': 'C:\\Users\\tanch\\.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+21:59:57.309866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A06ED4B20>]}
+21:59:57.477350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1B77F4F0>]}
+21:59:57.479361 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+21:59:57.983986 [debug] [MainThread]: checksum: 5f40d6d8cb6961df6ed5d565379794e3c4f18a1e87771ee7ad11edbcfd867449, vars: {}, profile: , target: , version: 1.11.0b2
+21:59:58.280261 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+21:59:58.280261 [debug] [MainThread]: Partial parsing: updated file: credit_default://models\models.yml
+21:59:58.280261 [debug] [MainThread]: Partial parsing: updated file: credit_default://models\staging\stg_credit_default.sql
+21:59:58.280261 [debug] [MainThread]: Partial parsing: updated file: credit_default://models\marts\feature_view_credit_default.sql
+21:59:58.881360 [warn ] [MainThread]: [WARNING][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_credit_default' in package 'credit_default' (models\models.yml). Arguments
+to generic tests should be nested under the `arguments` property.
+21:59:58.882357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1C0CEE60>]}
+21:59:59.024022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1C0CC7C0>]}
+21:59:59.149017 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\manifest.json
+21:59:59.152523 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\semantic_manifest.json
+21:59:59.204885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1C22C070>]}
+21:59:59.205889 [info ] [MainThread]: Found 2 models, 3 data tests, 492 macros
+21:59:59.209885 [info ] [MainThread]: 
+21:59:59.209885 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:59:59.210900 [info ] [MainThread]: 
+21:59:59.211888 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+21:59:59.219908 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CREDIT_DEFAULT'
+21:59:59.319902 [debug] [ThreadPool]: Using snowflake connection "list_CREDIT_DEFAULT"
+21:59:59.319902 [debug] [ThreadPool]: On list_CREDIT_DEFAULT: show terse schemas in database CREDIT_DEFAULT
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "connection_name": "list_CREDIT_DEFAULT"} */
+21:59:59.319902 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:00:00.161819 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.847 seconds
+22:00:00.161819 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CREDIT_DEFAULT_MODEL_model'
+22:00:00.208648 [debug] [ThreadPool]: Using snowflake connection "list_CREDIT_DEFAULT_MODEL_model"
+22:00:00.208648 [debug] [ThreadPool]: On list_CREDIT_DEFAULT_MODEL_model: show objects in CREDIT_DEFAULT.MODEL_model
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "connection_name": "list_CREDIT_DEFAULT_MODEL_model"} */;
+22:00:00.208648 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:00:00.677367 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.471 seconds
+22:00:00.677367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1BF5B700>]}
+22:00:00.693019 [debug] [Thread-1 (]: Began running node model.credit_default.stg_credit_default
+22:00:00.693019 [info ] [Thread-1 (]: 1 of 5 START sql view model MODEL_model.stg_credit_default ..................... [RUN]
+22:00:00.693019 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.credit_default.stg_credit_default'
+22:00:00.693019 [debug] [Thread-1 (]: Began compiling node model.credit_default.stg_credit_default
+22:00:00.708643 [debug] [Thread-1 (]: Writing injected SQL for node "model.credit_default.stg_credit_default"
+22:00:00.708643 [debug] [Thread-1 (]: Began executing node model.credit_default.stg_credit_default
+22:00:00.755502 [debug] [Thread-1 (]: Writing runtime sql for node "model.credit_default.stg_credit_default"
+22:00:00.755502 [debug] [Thread-1 (]: Using snowflake connection "model.credit_default.stg_credit_default"
+22:00:00.755502 [debug] [Thread-1 (]: On model.credit_default.stg_credit_default: create or replace   view CREDIT_DEFAULT.MODEL_model.stg_credit_default
+  
+  
+  
+  
+  as (
+    
+
+-- Staging view: pass through the RAW table and standardize the label name.
+SELECT
+  ID,
+  LIMIT_BAL,
+  SEX,
+  EDUCATION,
+  MARRIAGE,
+  AGE,
+  PAY_0, PAY_2, PAY_3, PAY_4, PAY_5, PAY_6,
+  BILL_AMT1, BILL_AMT2, BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6,
+  PAY_AMT1, PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6,
+  "payment next month" AS target
+FROM CREDIT_DEFAULT.RAW.RAW_CREDIT_DEFAULT_RAW
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "model.credit_default.stg_credit_default"} */;
+22:00:00.755502 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+22:00:01.208674 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.447 seconds
+22:00:01.255521 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A0709CA60>]}
+22:00:01.255521 [info ] [Thread-1 (]: 1 of 5 OK created sql view model MODEL_model.stg_credit_default ................ [SUCCESS 1 in 0.56s]
+22:00:01.255521 [debug] [Thread-1 (]: Finished running node model.credit_default.stg_credit_default
+22:00:01.255521 [debug] [Thread-1 (]: Began running node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:00:01.255521 [info ] [Thread-1 (]: 2 of 5 START test accepted_values_stg_credit_default_TARGET__0__1 .............. [RUN]
+22:00:01.271147 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.credit_default.stg_credit_default, now test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e)
+22:00:01.271147 [debug] [Thread-1 (]: Began compiling node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:00:01.271147 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"
+22:00:01.271147 [debug] [Thread-1 (]: Began executing node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:00:01.286755 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"
+22:00:01.302372 [debug] [Thread-1 (]: Using snowflake connection "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"
+22:00:01.302372 [debug] [Thread-1 (]: On test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        TARGET as value_field,
+        count(*) as n_records
+
+    from CREDIT_DEFAULT.MODEL_model.stg_credit_default
+    group by TARGET
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"} */
+22:00:02.341982 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.049 seconds
+22:00:02.373192 [info ] [Thread-1 (]: 2 of 5 PASS accepted_values_stg_credit_default_TARGET__0__1 .................... [PASS in 1.10s]
+22:00:02.373192 [debug] [Thread-1 (]: Finished running node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:00:02.373192 [debug] [Thread-1 (]: Began running node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:00:02.373192 [info ] [Thread-1 (]: 3 of 5 START test not_null_stg_credit_default_TARGET ........................... [RUN]
+22:00:02.388782 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e, now test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e)
+22:00:02.388782 [debug] [Thread-1 (]: Began compiling node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:00:02.404420 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"
+22:00:02.404420 [debug] [Thread-1 (]: Began executing node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:00:02.420043 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"
+22:00:02.420043 [debug] [Thread-1 (]: Using snowflake connection "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"
+22:00:02.420043 [debug] [Thread-1 (]: On test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select TARGET
+from CREDIT_DEFAULT.MODEL_model.stg_credit_default
+where TARGET is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"} */
+22:00:02.951327 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.521 seconds
+22:00:02.951327 [info ] [Thread-1 (]: 3 of 5 PASS not_null_stg_credit_default_TARGET ................................. [PASS in 0.56s]
+22:00:02.951327 [debug] [Thread-1 (]: Finished running node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:00:02.966893 [debug] [Thread-1 (]: Began running node model.credit_default.feature_view_credit_default
+22:00:02.966893 [info ] [Thread-1 (]: 4 of 5 START sql view model MODEL_model.feature_view_credit_default ............ [RUN]
+22:00:02.966893 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e, now model.credit_default.feature_view_credit_default)
+22:00:02.966893 [debug] [Thread-1 (]: Began compiling node model.credit_default.feature_view_credit_default
+22:00:02.982550 [debug] [Thread-1 (]: Writing injected SQL for node "model.credit_default.feature_view_credit_default"
+22:00:02.982550 [debug] [Thread-1 (]: Began executing node model.credit_default.feature_view_credit_default
+22:00:02.995601 [debug] [Thread-1 (]: Writing runtime sql for node "model.credit_default.feature_view_credit_default"
+22:00:02.995601 [debug] [Thread-1 (]: Using snowflake connection "model.credit_default.feature_view_credit_default"
+22:00:02.995601 [debug] [Thread-1 (]: On model.credit_default.feature_view_credit_default: create or replace   view CREDIT_DEFAULT.MODEL_model.feature_view_credit_default
+  
+  
+  
+  
+  as (
+    
+
+-- Features view: drop ID and keep only features + label for modeling.
+SELECT
+  LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE,
+  PAY_0, PAY_2, PAY_3, PAY_4, PAY_5, PAY_6,
+  BILL_AMT1, BILL_AMT2, BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6,
+  PAY_AMT1, PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6,
+  target
+FROM CREDIT_DEFAULT.MODEL_model.stg_credit_default
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "model.credit_default.feature_view_credit_default"} */;
+22:00:03.230059 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.230 seconds
+22:00:03.230059 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1291d0be-a7b4-4d15-b5d7-5fe44aaec5db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1E132080>]}
+22:00:03.245673 [info ] [Thread-1 (]: 4 of 5 OK created sql view model MODEL_model.feature_view_credit_default ....... [SUCCESS 1 in 0.26s]
+22:00:03.245673 [debug] [Thread-1 (]: Finished running node model.credit_default.feature_view_credit_default
+22:00:03.245673 [debug] [Thread-1 (]: Began running node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:00:03.245673 [info ] [Thread-1 (]: 5 of 5 START test not_null_feature_view_credit_default_LIMIT_BAL ............... [RUN]
+22:00:03.245673 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.credit_default.feature_view_credit_default, now test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a)
+22:00:03.261283 [debug] [Thread-1 (]: Began compiling node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:00:03.261283 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"
+22:00:03.261283 [debug] [Thread-1 (]: Began executing node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:00:03.276895 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"
+22:00:03.276895 [debug] [Thread-1 (]: Using snowflake connection "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"
+22:00:03.276895 [debug] [Thread-1 (]: On test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select LIMIT_BAL
+from CREDIT_DEFAULT.MODEL_model.feature_view_credit_default
+where LIMIT_BAL is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"} */
+22:00:04.136338 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.863 seconds
+22:00:04.151934 [info ] [Thread-1 (]: 5 of 5 PASS not_null_feature_view_credit_default_LIMIT_BAL ..................... [PASS in 0.91s]
+22:00:04.151934 [debug] [Thread-1 (]: Finished running node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:00:04.167552 [debug] [MainThread]: Connection 'master' was properly closed.
+22:00:04.167552 [debug] [MainThread]: Connection 'list_CREDIT_DEFAULT' was left open.
+22:00:04.167552 [debug] [MainThread]: On list_CREDIT_DEFAULT: Close
+22:00:04.261303 [debug] [MainThread]: Connection 'list_CREDIT_DEFAULT_MODEL_model' was left open.
+22:00:04.261303 [debug] [MainThread]: On list_CREDIT_DEFAULT_MODEL_model: Close
+22:00:04.448805 [debug] [MainThread]: Connection 'test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a' was left open.
+22:00:04.448805 [debug] [MainThread]: On test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a: Close
+22:00:04.542568 [info ] [MainThread]: 
+22:00:04.558123 [info ] [MainThread]: Finished running 3 data tests, 2 view models in 0 hours 0 minutes and 5.33 seconds (5.33s).
+22:00:04.558123 [debug] [MainThread]: Command end result
+22:00:04.605026 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\manifest.json
+22:00:04.605026 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\semantic_manifest.json
+22:00:04.605026 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\run_results.json
+22:00:04.605026 [info ] [MainThread]: 
+22:00:04.605026 [info ] [MainThread]: Completed successfully
+22:00:04.605026 [info ] [MainThread]: 
+22:00:04.605026 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+22:00:04.620625 [warn ] [MainThread]: [WARNING][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+22:00:04.620625 [debug] [MainThread]: Command `dbt build` succeeded at 22:00:04.620625 after 8.67 seconds
+22:00:04.620625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A08BFC8B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1B77F4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026A1C22CE50>]}
+22:00:04.620625 [debug] [MainThread]: Flushing usage events
+22:00:04.730082 [debug] [MainThread]: An error was encountered while trying to flush usage events
+22:07:34.515251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94CD0C850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94EF7C3A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94EF7C1C0>]}
+
+
+============================== 22:07:34.515251 | c53439d4-2b4c-4ad0-a620-91471bf24baa ==============================
+22:07:34.515251 [info ] [MainThread]: Running with dbt=1.11.0-b2
+22:07:34.515251 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'use_colors': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt build --select stg_credit_default+ --no-use-colors', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\tanch\\Documents\\WGU\\D610 Data Engineering Capstone\\dbt_project\\logs', 'profiles_dir': 'C:\\Users\\tanch\\.dbt', 'static_parser': 'True', 'write_json': 'True'}
+22:07:35.530888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94AFE6F50>]}
+22:07:35.671501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94BAC5F90>]}
+22:07:35.687126 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+22:07:36.140264 [debug] [MainThread]: checksum: 5f40d6d8cb6961df6ed5d565379794e3c4f18a1e87771ee7ad11edbcfd867449, vars: {}, profile: , target: , version: 1.11.0b2
+22:07:36.280886 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+22:07:36.280886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94E6D2A70>]}
+22:07:37.624621 [warn ] [MainThread]: [WARNING][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'stg_credit_default' in package 'credit_default' (models\models.yml). Arguments
+to generic tests should be nested under the `arguments` property.
+22:07:37.624621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9601A3760>]}
+22:07:37.765267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A9602F9780>]}
+22:07:37.859002 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\manifest.json
+22:07:37.859002 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\semantic_manifest.json
+22:07:37.999644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A96029D090>]}
+22:07:37.999644 [info ] [MainThread]: Found 2 models, 3 data tests, 492 macros
+22:07:37.999644 [info ] [MainThread]: 
+22:07:37.999644 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+22:07:37.999644 [info ] [MainThread]: 
+22:07:37.999644 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+22:07:37.999644 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CREDIT_DEFAULT'
+22:07:38.093386 [debug] [ThreadPool]: Using snowflake connection "list_CREDIT_DEFAULT"
+22:07:38.093386 [debug] [ThreadPool]: On list_CREDIT_DEFAULT: show terse schemas in database CREDIT_DEFAULT
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "connection_name": "list_CREDIT_DEFAULT"} */
+22:07:38.093386 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:07:38.843375 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.755 seconds
+22:07:38.858998 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CREDIT_DEFAULT_MODEL'
+22:07:38.874640 [debug] [ThreadPool]: Using snowflake connection "list_CREDIT_DEFAULT_MODEL"
+22:07:38.874640 [debug] [ThreadPool]: On list_CREDIT_DEFAULT_MODEL: show objects in CREDIT_DEFAULT.MODEL
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "connection_name": "list_CREDIT_DEFAULT_MODEL"} */;
+22:07:38.874640 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:07:39.312191 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.438 seconds
+22:07:39.312191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94BA74430>]}
+22:07:39.327801 [debug] [Thread-1 (]: Began running node model.credit_default.stg_credit_default
+22:07:39.343403 [info ] [Thread-1 (]: 1 of 5 START sql view model MODEL.stg_credit_default ........................... [RUN]
+22:07:39.343403 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.credit_default.stg_credit_default'
+22:07:39.343403 [debug] [Thread-1 (]: Began compiling node model.credit_default.stg_credit_default
+22:07:39.374628 [debug] [Thread-1 (]: Writing injected SQL for node "model.credit_default.stg_credit_default"
+22:07:39.374628 [debug] [Thread-1 (]: Began executing node model.credit_default.stg_credit_default
+22:07:39.421513 [debug] [Thread-1 (]: Writing runtime sql for node "model.credit_default.stg_credit_default"
+22:07:39.421513 [debug] [Thread-1 (]: Using snowflake connection "model.credit_default.stg_credit_default"
+22:07:39.421513 [debug] [Thread-1 (]: On model.credit_default.stg_credit_default: create or replace   view CREDIT_DEFAULT.MODEL.stg_credit_default
+  
+  
+  
+  
+  as (
+    
+
+-- Staging view: pass through the RAW table and standardize the label name.
+SELECT
+  ID,
+  LIMIT_BAL,
+  SEX,
+  EDUCATION,
+  MARRIAGE,
+  AGE,
+  PAY_0, PAY_2, PAY_3, PAY_4, PAY_5, PAY_6,
+  BILL_AMT1, BILL_AMT2, BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6,
+  PAY_AMT1, PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6,
+  "payment next month" AS target
+FROM CREDIT_DEFAULT.RAW.RAW_CREDIT_DEFAULT_RAW
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "model.credit_default.stg_credit_default"} */;
+22:07:39.421513 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+22:07:40.109092 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.697 seconds
+22:07:40.171511 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94B1A8A00>]}
+22:07:40.171511 [info ] [Thread-1 (]: 1 of 5 OK created sql view model MODEL.stg_credit_default ...................... [SUCCESS 1 in 0.81s]
+22:07:40.171511 [debug] [Thread-1 (]: Finished running node model.credit_default.stg_credit_default
+22:07:40.171511 [debug] [Thread-1 (]: Began running node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:07:40.171511 [info ] [Thread-1 (]: 2 of 5 START test accepted_values_stg_credit_default_TARGET__0__1 .............. [RUN]
+22:07:40.171511 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.credit_default.stg_credit_default, now test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e)
+22:07:40.171511 [debug] [Thread-1 (]: Began compiling node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:07:40.171511 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"
+22:07:40.171511 [debug] [Thread-1 (]: Began executing node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:07:40.202757 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"
+22:07:40.202757 [debug] [Thread-1 (]: Using snowflake connection "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"
+22:07:40.202757 [debug] [Thread-1 (]: On test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        TARGET as value_field,
+        count(*) as n_records
+
+    from CREDIT_DEFAULT.MODEL.stg_credit_default
+    group by TARGET
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '0','1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e"} */
+22:07:41.093467 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.892 seconds
+22:07:41.109034 [info ] [Thread-1 (]: 2 of 5 PASS accepted_values_stg_credit_default_TARGET__0__1 .................... [PASS in 0.94s]
+22:07:41.124659 [debug] [Thread-1 (]: Finished running node test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e
+22:07:41.124659 [debug] [Thread-1 (]: Began running node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:07:41.124659 [info ] [Thread-1 (]: 3 of 5 START test not_null_stg_credit_default_TARGET ........................... [RUN]
+22:07:41.124659 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.credit_default.accepted_values_stg_credit_default_TARGET__0__1.1ded964e2e, now test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e)
+22:07:41.124659 [debug] [Thread-1 (]: Began compiling node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:07:41.140266 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"
+22:07:41.140266 [debug] [Thread-1 (]: Began executing node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:07:41.140266 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"
+22:07:41.155878 [debug] [Thread-1 (]: Using snowflake connection "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"
+22:07:41.155878 [debug] [Thread-1 (]: On test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select TARGET
+from CREDIT_DEFAULT.MODEL.stg_credit_default
+where TARGET is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e"} */
+22:07:41.327843 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.183 seconds
+22:07:41.343414 [info ] [Thread-1 (]: 3 of 5 PASS not_null_stg_credit_default_TARGET ................................. [PASS in 0.22s]
+22:07:41.343414 [debug] [Thread-1 (]: Finished running node test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e
+22:07:41.359034 [debug] [Thread-1 (]: Began running node model.credit_default.feature_view_credit_default
+22:07:41.359034 [info ] [Thread-1 (]: 4 of 5 START sql view model MODEL.feature_view_credit_default .................. [RUN]
+22:07:41.359034 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.credit_default.not_null_stg_credit_default_TARGET.cf9ce2d06e, now model.credit_default.feature_view_credit_default)
+22:07:41.359034 [debug] [Thread-1 (]: Began compiling node model.credit_default.feature_view_credit_default
+22:07:41.359034 [debug] [Thread-1 (]: Writing injected SQL for node "model.credit_default.feature_view_credit_default"
+22:07:41.374638 [debug] [Thread-1 (]: Began executing node model.credit_default.feature_view_credit_default
+22:07:41.374638 [debug] [Thread-1 (]: Writing runtime sql for node "model.credit_default.feature_view_credit_default"
+22:07:41.374638 [debug] [Thread-1 (]: Using snowflake connection "model.credit_default.feature_view_credit_default"
+22:07:41.374638 [debug] [Thread-1 (]: On model.credit_default.feature_view_credit_default: create or replace   view CREDIT_DEFAULT.MODEL.feature_view_credit_default
+  
+  
+  
+  
+  as (
+    
+
+-- Features view: drop ID and keep only features + label for modeling.
+SELECT
+  LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE,
+  PAY_0, PAY_2, PAY_3, PAY_4, PAY_5, PAY_6,
+  BILL_AMT1, BILL_AMT2, BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6,
+  PAY_AMT1, PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6,
+  target
+FROM CREDIT_DEFAULT.MODEL.stg_credit_default
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "model.credit_default.feature_view_credit_default"} */;
+22:07:41.624692 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.243 seconds
+22:07:41.624692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c53439d4-2b4c-4ad0-a620-91471bf24baa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A96034D300>]}
+22:07:41.624692 [info ] [Thread-1 (]: 4 of 5 OK created sql view model MODEL.feature_view_credit_default ............. [SUCCESS 1 in 0.27s]
+22:07:41.640257 [debug] [Thread-1 (]: Finished running node model.credit_default.feature_view_credit_default
+22:07:41.640257 [debug] [Thread-1 (]: Began running node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:07:41.640257 [info ] [Thread-1 (]: 5 of 5 START test not_null_feature_view_credit_default_LIMIT_BAL ............... [RUN]
+22:07:41.640257 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.credit_default.feature_view_credit_default, now test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a)
+22:07:41.640257 [debug] [Thread-1 (]: Began compiling node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:07:41.640257 [debug] [Thread-1 (]: Writing injected SQL for node "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"
+22:07:41.655884 [debug] [Thread-1 (]: Began executing node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:07:41.655884 [debug] [Thread-1 (]: Writing runtime sql for node "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"
+22:07:41.655884 [debug] [Thread-1 (]: Using snowflake connection "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"
+22:07:41.655884 [debug] [Thread-1 (]: On test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select LIMIT_BAL
+from CREDIT_DEFAULT.MODEL.feature_view_credit_default
+where LIMIT_BAL is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b2", "profile_name": "credit_default", "target_name": "dev", "node_id": "test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a"} */
+22:07:42.062216 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.404 seconds
+22:07:42.062216 [info ] [Thread-1 (]: 5 of 5 PASS not_null_feature_view_credit_default_LIMIT_BAL ..................... [PASS in 0.42s]
+22:07:42.077782 [debug] [Thread-1 (]: Finished running node test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a
+22:07:42.077782 [debug] [MainThread]: Connection 'master' was properly closed.
+22:07:42.077782 [debug] [MainThread]: Connection 'list_CREDIT_DEFAULT' was left open.
+22:07:42.077782 [debug] [MainThread]: On list_CREDIT_DEFAULT: Close
+22:07:42.171593 [debug] [MainThread]: Connection 'list_CREDIT_DEFAULT_MODEL' was left open.
+22:07:42.171593 [debug] [MainThread]: On list_CREDIT_DEFAULT_MODEL: Close
+22:07:42.280932 [debug] [MainThread]: Connection 'test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a' was left open.
+22:07:42.280932 [debug] [MainThread]: On test.credit_default.not_null_feature_view_credit_default_LIMIT_BAL.f2a5e4733a: Close
+22:07:42.374701 [info ] [MainThread]: 
+22:07:42.374701 [info ] [MainThread]: Finished running 3 data tests, 2 view models in 0 hours 0 minutes and 4.38 seconds (4.38s).
+22:07:42.390256 [debug] [MainThread]: Command end result
+22:07:42.421517 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\manifest.json
+22:07:42.421517 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\semantic_manifest.json
+22:07:42.437140 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\tanch\Documents\WGU\D610 Data Engineering Capstone\dbt_project\target\run_results.json
+22:07:42.437140 [info ] [MainThread]: 
+22:07:42.437140 [info ] [MainThread]: Completed successfully
+22:07:42.437140 [info ] [MainThread]: 
+22:07:42.437140 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+22:07:42.437140 [warn ] [MainThread]: [WARNING][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+22:07:42.437140 [debug] [MainThread]: Command `dbt build` succeeded at 22:07:42.437140 after 8.03 seconds
+22:07:42.437140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94CD0C850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A95F1E06A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A94D002170>]}
+22:07:42.437140 [debug] [MainThread]: Flushing usage events
+22:07:42.577842 [debug] [MainThread]: An error was encountered while trying to flush usage events

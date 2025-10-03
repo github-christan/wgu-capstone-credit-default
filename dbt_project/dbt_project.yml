@@ -1,0 +1,11 @@
+name: credit_default
+version: 1.0.0
+profile: credit_default
+
+models:
+  credit_default:
+    +materialized: view
+#    staging:
+#      +schema: model
+#    marts:
+#      +schema: model

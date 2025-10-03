@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# dbt build artifacts
+dbt_project/target/
+dbt_project/logs/
+
+# OS/editor
+.DS_Store
+Thumbs.db
