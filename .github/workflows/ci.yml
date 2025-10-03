@@ -43,7 +43,12 @@ jobs:
           dbt --version
           dbt build --select stg_credit_default+ --no-use-colors
 
-      - name: Run analysis (prints AUC/ACC)
+      - name: Run analysis (prints AUC/ACC) and write summary
         working-directory: analysis
         run: |
-          python run_analysis.py
+          python run_analysis.py | | tee metrics.txt
+          echo "### Model Metrics" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          cat metrics.txt >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
