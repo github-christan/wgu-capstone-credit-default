@@ -8,7 +8,8 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: [0, 1]
+              config:
+                values: [0, 1]
 
   - name: feature_view_credit_default
     description: Analytics-ready features for modeling
