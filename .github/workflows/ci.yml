@@ -31,7 +31,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install dbt-snowflake pandas scikit-learn snowflake-connector-python
+          pip install "dbt-snowflake==1.7.*" "dbt-core==1.7.*"
+          pip install pandas scikit-learn snowflake-connector-python
+          pip freeze
 
       - name: dbt build (staging + feature view + tests)
         working-directory: dbt_project
