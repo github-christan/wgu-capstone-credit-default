@@ -1,4 +1,4 @@
-https://github.com/github-christan/wgu-capstone-credit-default/actions/workflows/ci.yml/badge.svg
+![CI](https://github.com/github-christan/wgu-capstone-credit-default/actions/workflows/ci.yml/badge.svg)
 
 How to run locally:
 python -m venv .venv
