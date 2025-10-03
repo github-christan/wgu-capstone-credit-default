@@ -46,7 +46,7 @@ jobs:
       - name: Run analysis (prints AUC/ACC) and write summary
         working-directory: analysis
         run: |
-          python run_analysis.py | | tee metrics.txt
+          python run_analysis.py | tee metrics.txt
           echo "### Model Metrics" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
