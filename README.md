@@ -31,23 +31,25 @@
 ---
 
 ## Repository layout
+<pre>
 .
 ├─ dbt_project/
-│ ├─ models/
-│ │ ├─ staging/
-│ │ │ └─ stg_credit_default.sql
-│ │ ├─ feature_view_credit_default.sql
-│ │ └─ models.yml
-│ └─ profiles.yml
+│  ├─ models/
+│  │  ├─ staging/
+│  │  │  └─ stg_credit_default.sql
+│  │  ├─ feature_view_credit_default.sql
+│  │  └─ models.yml
+│  └─ profiles.yml
 ├─ analysis/
-│ ├─ run_analysis.py
-│ └─ requirements.txt
+│  ├─ run_analysis.py
+│  └─ requirements.txt
 ├─ .github/
-│ ├─ ci/
-│ │ └─ profiles.yml
-│ └─ workflows/
-│ └─ ci.yml
+│  ├─ ci/
+│  │  └─ profiles.yml
+│  └─ workflows/
+│     └─ ci.yml
 └─ README.md
+</pre>
 
 
 ---
