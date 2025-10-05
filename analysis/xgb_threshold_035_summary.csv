@@ -1,0 +1,9 @@
+metric,value
+threshold,0.35
+precision,0.3389830508474576
+recall,0.8036162732295329
+accuracy,0.6098888888888889
+tn,3889.0
+fp,3120.0
+fn,391.0
+tp,1600.0
