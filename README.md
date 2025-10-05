@@ -32,16 +32,21 @@
 
 ## Repository layout
 .
-├─ dbt_project/ # dbt models + tests
+├─ dbt_project/
 │ ├─ models/
-│ │ ├─ staging/stg_credit_default.sql
+│ │ ├─ staging/
+│ │ │ └─ stg_credit_default.sql
 │ │ ├─ feature_view_credit_default.sql
-│ │ └─ models.yml # tests (not_null, accepted_values)
-│ └─ profiles.yml # local dev only; CI uses .github/ci/profiles.yml
+│ │ └─ models.yml
+│ └─ profiles.yml
 ├─ analysis/
-│ ├─ run_analysis.py # trains LR and XGBoost, prints metrics & threshold sweep
+│ ├─ run_analysis.py
 │ └─ requirements.txt
-├─ .github/workflows/ci.yml # CI: dbt build + analysis
+├─ .github/
+│ ├─ ci/
+│ │ └─ profiles.yml
+│ └─ workflows/
+│ └─ ci.yml
 └─ README.md
 
 
