@@ -102,4 +102,5 @@ XGBoost: better ranking power; feature importances and can add SHAP for case exp
 ## Data source
 
 UCI Machine Learning Repository — Default of Credit Card Clients (30,000 rows).
+https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients
 Used for educational purposes in WGU capstone.
